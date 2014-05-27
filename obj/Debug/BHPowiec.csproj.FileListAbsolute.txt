@@ -1,0 +1,5 @@
+c:\users\szymon sieciński\documents\visual studio 2012\Projects\BHPowiec\BHPowiec\bin\BHPowiec.dll
+c:\users\szymon sieciński\documents\visual studio 2012\Projects\BHPowiec\BHPowiec\bin\BHPowiec.pdb
+c:\users\szymon sieciński\documents\visual studio 2012\Projects\BHPowiec\BHPowiec\obj\Debug\BHPowiec.csprojResolveAssemblyReference.cache
+c:\users\szymon sieciński\documents\visual studio 2012\Projects\BHPowiec\BHPowiec\obj\Debug\BHPowiec.dll
+c:\users\szymon sieciński\documents\visual studio 2012\Projects\BHPowiec\BHPowiec\obj\Debug\BHPowiec.pdb
