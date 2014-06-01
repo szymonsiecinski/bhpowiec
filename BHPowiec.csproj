@@ -57,25 +57,83 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="App_Data\Users.mdf" />
     <Content Include="App_Data\Users_log.ldf">
       <DependentUpon>Users.mdf</DependentUpon>
     </Content>
+    <Content Include="ChangeEmail.aspx" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="ChangeUsername.aspx" />
+    <Content Include="Databases.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DeleteAccount.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Registration.aspx" />
+    <Content Include="RequestRole.aspx" />
+    <Content Include="RoleRequests.aspx" />
+    <Content Include="UserPage.aspx" />
     <Content Include="UserSettings.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BHPowiec.Master.cs">
+      <DependentUpon>BHPowiec.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BHPowiec.Master.designer.cs">
+      <DependentUpon>BHPowiec.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeEmail.aspx.cs">
+      <DependentUpon>ChangeEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeEmail.aspx.designer.cs">
+      <DependentUpon>ChangeEmail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUsername.aspx.cs">
+      <DependentUpon>ChangeUsername.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeUsername.aspx.designer.cs">
+      <DependentUpon>ChangeUsername.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Databases.aspx.cs">
+      <DependentUpon>Databases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Databases.aspx.designer.cs">
+      <DependentUpon>Databases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -92,6 +150,27 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RequestRole.aspx.cs">
+      <DependentUpon>RequestRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestRole.aspx.designer.cs">
+      <DependentUpon>RequestRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoleRequests.aspx.cs">
+      <DependentUpon>RoleRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoleRequests.aspx.designer.cs">
+      <DependentUpon>RoleRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage.aspx.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage.aspx.designer.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserSettings.aspx.cs">
       <DependentUpon>UserSettings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,6 +180,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BHPowiec.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BHPowiec.master.cs" Inherits="BHPowiec.BHPowiec" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>BHPowiec</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="Login" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <table style="font-family:Arial">
+    <tr>
+        <td colspan="2" style="width:800px; height:80px; background-color:#AADDFF; 
+            text-align:center">
+            <h1>
+                BHPowiec
+            </h1>
+        </td>
+    </tr>
+    <tr>
+        <td style="height:500px; background-color:#AAFFAA; width:150px">
+            <h3>Menu</h3>
+            <asp:ContentPlaceHolder ID="TrescMenu" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </td>
+        <td style="height:500px; background-color:#FFFFAA; width:650px">
+                 <div>
+        <asp:ContentPlaceHolder id="TrescStrony" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="background-color:#AADDFF; text-align:center">
+            (c) 2014 by Aleksander Rotowski, Szymon Sieciński
+        </td>
+    </tr>
+</table>
+    </div>
+    </form>
+</body>
+</html>

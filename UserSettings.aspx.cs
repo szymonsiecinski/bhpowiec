@@ -46,9 +46,22 @@ namespace BHPowiec
                         if (role_comm.ExecuteScalar() != null)
                         {
                             LabelRole.Text = role_comm.ExecuteScalar().ToString();
+
+                            if (role_comm.ExecuteScalar().ToString() != "Admin")
+                            {
+                                HyperLinkReqRole.Text = "Poproś o zmianę roli";
+                            }
+                            else
+                            {
+                                HyperLinkReqRole.Visible = false;
+                                HyperLinkDelUser.Visible = false;
+                            }
                         }
                         else
+                        {
+                            HyperLinkReqRole.Text = "Poproś o przydzielenie roli";
                             LabelRole.Text = "Nie przydzielona";
+                        }
 
                         conn_users.Close();
                     }

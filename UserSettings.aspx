@@ -1,50 +1,26 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserSettings.aspx.cs" Inherits="BHPowiec.UserSettings" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserSettings.aspx.cs" Inherits="BHPowiec.UserSettings" MasterPageFile="~/BHPowiec.Master" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 76%;
-            height: 85px;
-        }
-        .auto-style2 {
-            width: 178px;
-            text-align: right;
-        }
-        .auto-style3 {
-            width: 178px;
-            text-align: right;
-            height: 23px;
-        }
-        .auto-style4 {
-            height: 23px;
-            text-align: center;
-            width: 333px;
-        }
-        .auto-style7 {
-            width: 333px;
-        }
-        .auto-style8 {
-            width: 369px;
-        }
-        .auto-style9 {
-            height: 23px;
-            text-align: center;
-            width: 369px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="PasekLogowania" ContentPlaceHolderID="Login" runat="server">
     <div>
-    
-        <p id="login">
+      <p id="login">
         <asp:Label ID="LabelUsername" runat="server" Text="Jesteś zalogowany jako"></asp:Label>
 &nbsp;<asp:Button ID="ButtonLogout" runat="server" OnClick="ButtonLogout_Click" Text="Wyjdź" />
         </p>
+    </div>
+</asp:Content>
+
+<asp:Content runat="server" ID="UserLoginMenu" ContentPlaceHolderID="TrescMenu">
+    <ul>
+        <li>
+            <asp:HyperLink ID="HyperLinkUserPage" NavigateUrl="~/UserPage.aspx" runat="server">Strona użytkownika</asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="HyperLinkDelUser" runat="server" NavigateUrl="DeleteAccount.aspx">Usuń swoje konto</asp:HyperLink>
+        </li>
+    </ul>
+</asp:Content>
+
+<asp:Content runat="server" ID="UserLoginContent" ContentPlaceHolderID="TrescStrony">
     
         <table class="auto-style1">
             <tr>
@@ -55,7 +31,7 @@
                     <asp:Label ID="LabelUname" runat="server" style="text-align: center" Text="Label"></asp:Label>
                 </td>
                 <td style="text-align: center" class="auto-style7">
-                    <asp:HyperLink ID="HyperLinkChUserName" runat="server">Zmień nazwę użytkownika</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLinkChUserName" runat="server" NavigateUrl="ChangeUsername.aspx">Zmień nazwę użytkownika</asp:HyperLink>
                 </td>
             </tr>
             <tr>
@@ -66,7 +42,7 @@
                     <asp:Label ID="LabelEmail" runat="server" style="text-align: center" Text="Label"></asp:Label>
                 </td>
                 <td class="auto-style4">
-                    <asp:HyperLink ID="HyperLinkChEmail" runat="server">Zmień adres e-mail</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLinkChEmail" runat="server" NavigateUrl="ChangeEmail.aspx">Zmień adres e-mail</asp:HyperLink>
                 </td>
             </tr>
             <tr>
@@ -77,7 +53,7 @@
                     <asp:Label ID="LabelRole" runat="server" Text="Label"></asp:Label>
                 </td>
                 <td style="text-align: center" class="auto-style7">
-                    <asp:HyperLink ID="HyperLinkReqRole" runat="server">Poproś o przydzielenie roli</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLinkReqRole" runat="server" NavigateUrl="RequestRole.aspx">Poproś o przydzielenie roli</asp:HyperLink>
                 </td>
             </tr>
         </table>
@@ -107,8 +83,4 @@
             <SortedDescendingHeaderStyle BackColor="#002876" />
         </asp:GridView>
         </p>
-    
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>

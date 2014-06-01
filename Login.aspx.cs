@@ -52,7 +52,7 @@ namespace BHPowiec
                     if (TextBoxPass.Text == password)
                     {
                         Session["UserSession"] = TextBoxUsername.Text;
-                        Response.Redirect("UserSettings.aspx");
+                        Response.Redirect("UserPage.aspx");
                         Response.Write("Jesteś zalogowany.");
                     }
                     else

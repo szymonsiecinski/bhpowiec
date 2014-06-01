@@ -1,41 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="BHPowiec.Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="BHPowiec.Registration" MasterPageFile="~/BHPowiec.Master" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            height: 23px;
-        }
-        .auto-style3 {
-            height: 23px;
-            width: 219px;
-            text-align: right;
-        }
-        .auto-style4 {
-            width: 219px;
-        }
-        .auto-style5 {
-            width: 219px;
-            text-align: right;
-        }
-        .auto-style6 {
-            width: 219px;
-            text-align: right;
-            height: 30px;
-        }
-        .auto-style7 {
-            height: 30px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="RegistrationForm" ContentPlaceHolderID="TrescStrony" runat="server">
     <div>
     
         <table class="auto-style1">
@@ -95,6 +60,15 @@
         </table>
     
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+
+<asp:Content ID="RegistrationMenu" ContentPlaceHolderID="TrescMenu" runat="server">
+    <ul>
+        <li>
+            <asp:HyperLink ID="MainPage" Text="Strona główna" NavigateUrl="Default.aspx" runat="server"></asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="About" Text="O programie" NavigateUrl="About.aspx" runat="server" />
+        </li>
+    </ul>
+</asp:Content>

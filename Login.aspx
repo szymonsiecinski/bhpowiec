@@ -1,46 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BHPowiec.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BHPowiec.Login" MasterPageFile="~/BHPowiec.Master" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            text-align: right;
-            width: 217px;
-        }
-        .auto-style3 {
-            width: 217px;
-        }
-        .auto-style4 {
-            width: 350px;
-            text-align: center;
-        }
-        .auto-style5 {
-            width: 350px;
-            text-align: center;
-        }
-        .auto-style6 {
-            text-align: right;
-            width: 217px;
-            height: 26px;
-        }
-        .auto-style7 {
-            width: 350px;
-            text-align: center;
-            height: 26px;
-        }
-        .auto-style8 {
-            height: 26px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content runat="server" ID="UserLoginContent" ContentPlaceHolderID="TrescStrony">
     <div>
     
         <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Logowanie"></asp:Label>
@@ -86,6 +46,11 @@
         </table>
     
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+
+<asp:Content ID="Menu" ContentPlaceHolderID="TrescMenu" runat="server">
+        <ul>
+        <li><asp:HyperLink ID="HyperLinkMainPage" runat="server" Text="Strona główna" NavigateUrl="~/Default.aspx" /></li>
+            <li><asp:HyperLink ID="HyperLinkAbout" runat="server" Text="O programie" NavigateUrl="~/About.aspx" /></li>
+    </ul>
+</asp:Content>
