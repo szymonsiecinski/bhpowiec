@@ -15,6 +15,7 @@ namespace BHPowiec
         HyperLink BadaniaOkresowe, ListaPracownikow, BadaniaPracownikow;
         LiteralControl liBeg, liEnd;
         ContentPlaceHolder ctMenu;
+        GridView dopuszczenia;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,6 +44,15 @@ namespace BHPowiec
                         //wprowadź nazwę użytkownika z bazy
                         LabelUsername.Text = uname_comm.ExecuteScalar().ToString();
                         login = LabelUsername.Text;
+
+                        //decyzje po badaniach
+                        SqlDataSource datasource = new SqlDataSource();
+                        datasource.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                        datasource.SelectCommand = "select KP.IdPacjenta, D.IdBadania, D.DopuszczenieDoPracy, D.Komentarz from DecyzjePoBadaniu AS D JOIN KolejkaPacjentow AS KP ON D.IdBadania=KP.Id";
+                        dopuszczenia = new GridView();
+                        dopuszczenia.DataSource = datasource;
+                        dopuszczenia.AllowPaging = true;
+                        dopuszczenia.AllowSorting = true;
 
                         //elementy menu użytkownika
                         liBeg = new LiteralControl("<li>");
@@ -140,6 +150,10 @@ namespace BHPowiec
                 ctMenu.Controls.Add(liBeg);
                 ctMenu.Controls.Add(BadaniaOkresowe);
                 ctMenu.Controls.Add(liEnd);
+
+                ctTresc.Controls.Add(new LiteralControl("<h2>Odpowiedzi po badaniach</h2><div>"));
+                ctTresc.Controls.Add(dopuszczenia);
+                ctTresc.Controls.Add(new LiteralControl("</div>"));
             }
 
             if (rola == "Lekarz medycyny pracy")

@@ -52,6 +52,12 @@ namespace BHPowiec
             }
         }
 
+        protected void ButtonLogout_Click(object sender, EventArgs e)
+        {
+            Session["UserSession"] = null;
+            Response.Redirect("Login.aspx");
+        }
+
         protected void ChangePassBtn_Click(object sender, EventArgs e)
         {
             try

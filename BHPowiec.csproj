@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AddTest.aspx" />
+    <Content Include="AddWorker.aspx" />
     <Content Include="App_Data\Users.mdf" />
     <Content Include="App_Data\Users_log.ldf">
       <DependentUpon>Users.mdf</DependentUpon>
@@ -69,6 +71,9 @@
     <Content Include="Default.aspx" />
     <Content Include="DeleteAccount.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="PatientsInQueue.aspx" />
+    <Content Include="PeriodicTests.aspx" />
+    <Content Include="RecoverPassword.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="RequestRole.aspx" />
     <Content Include="RoleRequests.aspx" />
@@ -77,6 +82,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WorkersList.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -85,6 +91,20 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTest.aspx.cs">
+      <DependentUpon>AddTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTest.aspx.designer.cs">
+      <DependentUpon>AddTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddWorker.aspx.cs">
+      <DependentUpon>AddWorker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddWorker.aspx.designer.cs">
+      <DependentUpon>AddWorker.aspx</DependentUpon>
     </Compile>
     <Compile Include="BHPowiec.Master.cs">
       <DependentUpon>BHPowiec.Master</DependentUpon>
@@ -142,7 +162,28 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PatientsInQueue.aspx.cs">
+      <DependentUpon>PatientsInQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientsInQueue.aspx.designer.cs">
+      <DependentUpon>PatientsInQueue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicTests.aspx.cs">
+      <DependentUpon>PeriodicTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PeriodicTests.aspx.designer.cs">
+      <DependentUpon>PeriodicTests.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecoverPassword.aspx.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoverPassword.aspx.designer.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,6 +218,13 @@
     </Compile>
     <Compile Include="UserSettings.aspx.designer.cs">
       <DependentUpon>UserSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkersList.aspx.cs">
+      <DependentUpon>WorkersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkersList.aspx.designer.cs">
+      <DependentUpon>WorkersList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

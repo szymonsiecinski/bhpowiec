@@ -10,7 +10,7 @@
 namespace BHPowiec {
     
     
-    public partial class Databases {
+    public partial class AddTest {
         
         /// <summary>
         /// LabelUsername control.
@@ -31,165 +31,111 @@ namespace BHPowiec {
         protected global::System.Web.UI.WebControls.Button ButtonLogout;
         
         /// <summary>
-        /// HyperLinkUserPage control.
+        /// LabelNazwa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkUserPage;
+        protected global::System.Web.UI.WebControls.Label LabelNazwa;
         
         /// <summary>
-        /// HyperLinkUserSettings control.
+        /// TextBoxNazwa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkUserSettings;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxNazwa;
         
         /// <summary>
-        /// SqlDataSourceBadania control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceBadania;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// GridViewBadania control.
+        /// LabelNazwisko control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewBadania;
+        protected global::System.Web.UI.WebControls.Label LabelNazwisko;
         
         /// <summary>
-        /// SqlDataSourceDecyzje control.
+        /// RadioButtonTakZdal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceDecyzje;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonTakZdal;
         
         /// <summary>
-        /// GridViewDecyzje control.
+        /// RadioButtonNieZdal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewDecyzje;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonNieZdal;
         
         /// <summary>
-        /// SqlDataSourcePracownicy control.
+        /// LabelEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourcePracownicy;
+        protected global::System.Web.UI.WebControls.Label LabelEmail;
         
         /// <summary>
-        /// GridViewPracownicy control.
+        /// RadioButtonTakSpec control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewPracownicy;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonTakSpec;
         
         /// <summary>
-        /// SqlDataSourceZawody control.
+        /// RadioButtonNieSpec control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceZawody;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonNieSpec;
         
         /// <summary>
-        /// GridViewZawody control.
+        /// LabelStanowisko control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewZawody;
+        protected global::System.Web.UI.WebControls.Label LabelStanowisko;
         
         /// <summary>
-        /// SqlDataSourceKolejkaPacjentow control.
+        /// TextBoxSpecjalista control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceKolejkaPacjentow;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSpecjalista;
         
         /// <summary>
-        /// GridViewKolejkaPacjentow control.
+        /// ButtonDodajBadanie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewKolejkaPacjentow;
-        
-        /// <summary>
-        /// SqlDataSourceUserRoles control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceUserRoles;
-        
-        /// <summary>
-        /// GridViewUserRoles control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewUserRoles;
-        
-        /// <summary>
-        /// SqlDataSourceRoleRequest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceRoleRequest;
-        
-        /// <summary>
-        /// GridViewRoleRequest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewRoleRequest;
-        
-        /// <summary>
-        /// SqlDataSourceUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceUsers;
-        
-        /// <summary>
-        /// GridViewUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewUsers;
+        protected global::System.Web.UI.WebControls.Button ButtonDodajBadanie;
     }
 }

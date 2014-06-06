@@ -34,7 +34,7 @@
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="text-align: center" Text="Wejdź" />
                 </td>
                 <td>
-                    <asp:HyperLink ID="HyperLink1" runat="server">Nie pamiętam hasła</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="RecoverPassword.aspx">Nie pamiętam hasła</asp:HyperLink>
                 &nbsp;<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="Registration.aspx">Zarejestruj się</asp:HyperLink>
                 </td>
             </tr>

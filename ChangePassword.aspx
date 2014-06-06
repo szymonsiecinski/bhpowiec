@@ -1,14 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="BHPowiec.ChangePassword" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BHPowiec.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="BHPowiec.ChangePassword" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Login" runat="server">
+    <p id="P1">
+        <asp:Label ID="LabelUsername" runat="server" Text="Jesteś zalogowany jako"></asp:Label>
+&nbsp;<asp:Button ID="ButtonLogout" runat="server" OnClick="ButtonLogout_Click" Text="Wyjdź" />
+        </p>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="TrescMenu" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="TrescStrony" runat="server">
     <table class="form">
         <tr>
                 <td class="auto-style5">Hasło:</td>
@@ -33,8 +34,4 @@
             <td><asp:Button runat="server" ID="ChangePassBtn" Text="Zmień hasło" OnClick="ChangePassBtn_Click"/></td>
         </tr>
     </table>
-
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
