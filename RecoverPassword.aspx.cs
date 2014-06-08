@@ -38,7 +38,7 @@ namespace BHPowiec
         {
             try
             {
-                SqlConnection conn_users = new SqlConnection(ConfigurationManager.ConnectionStrings["UsersConnectionString"].ConnectionString);
+                SqlConnection conn_users = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 conn_users.Open();
 
                 string checkUser = "select count(*) from Users where UserName='" + TextBoxUsername.Text + "'";

@@ -19,7 +19,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="TrescStrony" runat="server">
     <h2>Wnioski użytkowników o przydział uprawnień</h2>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UsersConnectionString %>" SelectCommand="SELECT Users.UserName AS 'Użytkownik', UserRoles.Name AS 'Pożądane stanowisko', RoleRequest.Reason AS 'Powód wniosku' FROM RoleRequest INNER JOIN Users ON RoleRequest.UserId = Users.ID INNER JOIN UserRoles ON UserRoles.Id = RoleRequest.RoleId"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=ffe20b33-b6e4-423f-8dd4-a3280152a211.sqlserver.sequelizer.com;Initial Catalog=dbffe20b33b6e4423f8dd4a3280152a211;User ID=bjiucujoibvememl;Password=bssc2vBnYfhAkAd7DP8YYTry84Zwpq3kztZenKGQ3g88N6xZ83MXmNLqa2c6Ce7G" SelectCommand="SELECT Users.UserName AS 'Użytkownik', UserRoles.Name AS 'Pożądane stanowisko', RoleRequest.Reason AS 'Powód wniosku' FROM RoleRequest INNER JOIN Users ON RoleRequest.UserId = Users.ID INNER JOIN UserRoles ON UserRoles.Id = RoleRequest.RoleId" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />

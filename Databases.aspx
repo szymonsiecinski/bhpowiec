@@ -63,7 +63,7 @@
                 </asp:GridView></td>
 
             <td><asp:SqlDataSource ID="SqlDataSourceZawody" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Zawody]"></asp:SqlDataSource>
-    <asp:GridView ID="GridViewZawody" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceZawody">
+    <asp:GridView ID="GridViewZawody" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceZawody" AllowPaging="True" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
             <asp:BoundField DataField="NazwaZawodu" HeaderText="NazwaZawodu" SortExpression="NazwaZawodu" />
@@ -74,7 +74,7 @@
                 </asp:GridView></td>
         </tr>
         <tr>
-            <td><asp:SqlDataSource ID="SqlDataSourceKolejkaPacjentow" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [KolejkaPacjentow]"></asp:SqlDataSource>
+            <td><asp:SqlDataSource ID="SqlDataSourceKolejkaPacjentow" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [KolejkaPacjentow]" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>"></asp:SqlDataSource>
     <asp:GridView ID="GridViewKolejkaPacjentow" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceKolejkaPacjentow">
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
@@ -85,7 +85,7 @@
         </Columns>
                 </asp:GridView></td>
 
-            <td><asp:SqlDataSource ID="SqlDataSourceUserRoles" runat="server" ConnectionString="<%$ ConnectionStrings:UsersConnectionString %>" SelectCommand="SELECT * FROM [UserRoles]"></asp:SqlDataSource>
+            <td><asp:SqlDataSource ID="SqlDataSourceUserRoles" runat="server" ConnectionString="Data Source=ffe20b33-b6e4-423f-8dd4-a3280152a211.sqlserver.sequelizer.com;Initial Catalog=dbffe20b33b6e4423f8dd4a3280152a211;User ID=bjiucujoibvememl;Password=bssc2vBnYfhAkAd7DP8YYTry84Zwpq3kztZenKGQ3g88N6xZ83MXmNLqa2c6Ce7G" SelectCommand="SELECT * FROM [UserRoles]" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
     <asp:GridView ID="GridViewUserRoles" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceUserRoles">
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
@@ -94,7 +94,7 @@
                 </asp:GridView></td>
         </tr>
         <tr>
-            <td><asp:SqlDataSource ID="SqlDataSourceRoleRequest" runat="server" ConnectionString="<%$ ConnectionStrings:UsersConnectionString %>" SelectCommand="SELECT * FROM [RoleRequest]"></asp:SqlDataSource>
+            <td><asp:SqlDataSource ID="SqlDataSourceRoleRequest" runat="server" ConnectionString="Data Source=ffe20b33-b6e4-423f-8dd4-a3280152a211.sqlserver.sequelizer.com;Initial Catalog=dbffe20b33b6e4423f8dd4a3280152a211;User ID=bjiucujoibvememl;Password=bssc2vBnYfhAkAd7DP8YYTry84Zwpq3kztZenKGQ3g88N6xZ83MXmNLqa2c6Ce7G" SelectCommand="SELECT * FROM [RoleRequest]" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
     <asp:GridView ID="GridViewRoleRequest" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceRoleRequest">
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
@@ -105,7 +105,7 @@
         </Columns>
                 </asp:GridView></td>
 
-            <td><asp:SqlDataSource ID="SqlDataSourceUsers" runat="server" ConnectionString="<%$ ConnectionStrings:UsersConnectionString %>" SelectCommand="SELECT [Email], [UserName], [ID], [Role] FROM [Users]"></asp:SqlDataSource>
+            <td><asp:SqlDataSource ID="SqlDataSourceUsers" runat="server" ConnectionString="Data Source=ffe20b33-b6e4-423f-8dd4-a3280152a211.sqlserver.sequelizer.com;Initial Catalog=dbffe20b33b6e4423f8dd4a3280152a211;User ID=bjiucujoibvememl;Password=bssc2vBnYfhAkAd7DP8YYTry84Zwpq3kztZenKGQ3g88N6xZ83MXmNLqa2c6Ce7G" SelectCommand="SELECT [Email], [UserName], [ID], [Role] FROM [Users]" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
     <asp:GridView ID="GridViewUsers" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSourceUsers">
         <Columns>
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />

@@ -21,7 +21,7 @@ namespace BHPowiec
                 try
                 {
                     conn_users = new SqlConnection(
-                        ConfigurationManager.ConnectionStrings["UsersConnectionString"].ConnectionString);
+                        ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
                     string checkUser = "select ID from Users where UserName='" + Session["UserSession"].ToString() + "'";
                     SqlCommand command = new SqlCommand(checkUser, conn_users);

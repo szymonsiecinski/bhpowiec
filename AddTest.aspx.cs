@@ -19,7 +19,7 @@ namespace BHPowiec
             {
                 try
                 {
-                    conn_users = new SqlConnection(ConfigurationManager.ConnectionStrings["UsersConnectionString"].ConnectionString);
+                    conn_users = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                     workers_conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                     conn_users.Open();
 

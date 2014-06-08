@@ -27,7 +27,7 @@
         <br />
         <br />
         <asp:Button ID="ButtonSubmit" runat="server" OnClick="ButtonSubmit_Click" Text="Wyślij wniosek" />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UsersConnectionString %>" SelectCommand="SELECT [Name] FROM [UserRoles]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=ffe20b33-b6e4-423f-8dd4-a3280152a211.sqlserver.sequelizer.com;Initial Catalog=dbffe20b33b6e4423f8dd4a3280152a211;User ID=bjiucujoibvememl;Password=bssc2vBnYfhAkAd7DP8YYTry84Zwpq3kztZenKGQ3g88N6xZ83MXmNLqa2c6Ce7G" SelectCommand="SELECT [Name] FROM [UserRoles]" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
     
     </div>
 </asp:Content>

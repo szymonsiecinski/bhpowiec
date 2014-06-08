@@ -1,18 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangeEmail.aspx.cs" Inherits="BHPowiec.ChangeEmail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangeEmail.aspx.cs" Inherits="BHPowiec.ChangeEmail" MasterPageFile="~/BHPowiec.Master" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 155px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="tresc" ContentPlaceHolderID="TrescStrony" runat="server">
     <div>
     <table class="form">
         <tr>
@@ -35,6 +23,4 @@
         </tr>
     </table>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
