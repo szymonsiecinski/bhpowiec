@@ -38,6 +38,8 @@ namespace BHPowiec
 
                     if (tmp == 1)
                     {
+                        wybranyPracownik = GridView1.SelectedIndex + 1;
+
                         conn_users.Open();
                         string getUserName = "select UserName from Users where UserName='" + Session["UserSession"].ToString() + "'";
                         string getRole = "select UserRoles.Name from UserRoles join Users on UserRoles.Id=Users.ID where Users.UserName='" + Session["UserSession"].ToString() + "'";

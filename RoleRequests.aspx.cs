@@ -24,6 +24,7 @@ namespace BHPowiec
                 }
 
                 LabelUsername.Text = String.Format("Jesteś zalogowany jako {0}.", Session["UserSession"].ToString());
+                wybranyIndex = GridView1.SelectedIndex + 1;
             }
             else
             {
@@ -111,7 +112,7 @@ namespace BHPowiec
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            wybranyIndex = GridView1.SelectedIndex;
+            wybranyIndex = GridView1.SelectedIndex+1;
         }
 
     }

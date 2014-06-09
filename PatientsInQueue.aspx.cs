@@ -59,6 +59,8 @@ namespace BHPowiec
                             server_poczty.EnableSsl = true;
                             server_poczty.SendCompleted += server_poczty_SendCompleted;
 
+                            wybraneBadanie = GridView1.SelectedIndex + 1;
+
                             if (rola != "Lekarz medycyny pracy")
                             {
                                 Response.Redirect("UserPage.aspx");
@@ -169,13 +171,22 @@ namespace BHPowiec
 
             string adresyEmail = "select Email from Users where Role = 2";
             SqlCommand wczytajAdresy = new SqlCommand(adresyEmail, conn_users);
-            conn_users.Open();
-            wczytaneAdresySql = wczytajAdresy.ExecuteReader();
-            conn_users.Close();
 
-            while (wczytaneAdresySql.Read())
+            try
             {
-                adresaci.Add(new MailAddress(wczytaneAdresySql[0].ToString()));
+                conn_users.Open();
+                wczytaneAdresySql = wczytajAdresy.ExecuteReader();
+
+                while (wczytaneAdresySql.Read())
+                {
+                    adresaci.Add(new MailAddress(wczytaneAdresySql[0].ToString()));
+                }
+
+                conn_users.Close();
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex);
             }
 
             return adresaci;
@@ -186,9 +197,9 @@ namespace BHPowiec
             MailAddressCollection PracownicyBHP = AdresyBHP();
 
             workers_conn.Open();
-            string dodajDecyzje = "insert into DecyzjePoBadaniu(IdBadania, DopuszczenieDoPracy,Komentarz) values(@Id,@dopuszczony,@komentarz)";
+            string dodajDecyzje = "insert into DecyzjePoBadaniu(IdBadania, DopuszczenieDoPracy,Komentarz) values(@IdBad,@dopuszczony,@komentarz)";
             SqlCommand dodajDecyzjePolecenie = new SqlCommand(dodajDecyzje, workers_conn);
-            dodajDecyzjePolecenie.Parameters.AddWithValue("@Id", wybraneBadanie);
+            dodajDecyzjePolecenie.Parameters.AddWithValue("@IdBad", wybraneBadanie);
             dodajDecyzjePolecenie.Parameters.AddWithValue("@dopuszczony", RadioButtonZatTak.Checked);
             dodajDecyzjePolecenie.Parameters.AddWithValue("@komentarz", TextBoxKomentarz.Text);
 
