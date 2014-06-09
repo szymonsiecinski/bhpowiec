@@ -148,6 +148,9 @@ namespace BHPowiec
             korespondencja.From = new MailAddress(adres_nadawcy, "Serwis BHPowiec");
             korespondencja.Body = "Szanowny Panie, Szanowna Pani\nProszę zgłosić się na badania wstępne lub badania okresowe. Szczegóły przekaże pracownik BHP.\nSerwis BHPowiec.";
 
+            foreach (var ad in adresaci)
+                korespondencja.To.Add(ad);
+
             try
             {
                 server_poczty.Send(korespondencja);
