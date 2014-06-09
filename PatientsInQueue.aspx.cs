@@ -166,18 +166,17 @@ namespace BHPowiec
             MailAddressCollection adresaci = new MailAddressCollection();
 
             SqlDataReader wczytaneAdresySql = null;
-            workers_conn.Open();
 
             string adresyEmail = "select Email from Users where Role = 2";
             SqlCommand wczytajAdresy = new SqlCommand(adresyEmail, conn_users);
+            conn_users.Open();
             wczytaneAdresySql = wczytajAdresy.ExecuteReader();
+            conn_users.Close();
 
             while (wczytaneAdresySql.Read())
             {
                 adresaci.Add(new MailAddress(wczytaneAdresySql[0].ToString()));
             }
-
-            workers_conn.Close();
 
             return adresaci;
         }
