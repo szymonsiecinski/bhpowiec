@@ -59,7 +59,7 @@
             </td>
             <td class="auto-style3">
                 
-                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Nazwa zawodu" DataValueField="ID">
+                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="NazwaZawodu" DataValueField="ID">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Stanowiska]"></asp:SqlDataSource>
                 

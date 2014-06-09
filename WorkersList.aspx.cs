@@ -191,7 +191,7 @@ namespace BHPowiec
         protected void ButtonDodajPracownika_Click(object sender, EventArgs e)
         {
 
-            string addWorker = "update Pracownicy set Imie=@imie, Nazwisko=@nazwisko, Email=@email, IdStanowiska=@stanowisko where Id='"+wybranyPracownik;
+            string addWorker = "update Pracownicy set Imie=@imie, Nazwisko=@nazwisko, Email=@email, IdStanowiska=@stanowisko where Id="+wybranyPracownik;
             SqlCommand addWorkerCommand = new SqlCommand(addWorker, workers_conn);
 
             int id_stan = Convert.ToInt16(DropDownListZawody.SelectedItem.Value);
