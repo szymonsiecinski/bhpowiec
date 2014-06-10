@@ -16,6 +16,7 @@ namespace BHPowiec
         LiteralControl liBeg, liEnd;
         ContentPlaceHolder ctMenu;
         GridView dopuszczenia;
+        SqlDataSource datasource;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,10 +47,11 @@ namespace BHPowiec
                         login = LabelUsername.Text;
 
                         //decyzje po badaniach
-                        SqlDataSource datasource = new SqlDataSource();
+                        datasource = new SqlDataSource();
                         datasource.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                         datasource.SelectCommand = "select KP.IdPacjenta, D.IdBadania, D.DopuszczenieDoPracy, D.Komentarz from DecyzjePoBadaniu AS D JOIN KolejkaPacjentow AS KP ON D.IdBadania=KP.Id";
                         dopuszczenia = new GridView();
+                        dopuszczenia.DataSource = null;
                         dopuszczenia.DataSource = datasource;
                         dopuszczenia.AllowPaging = true;
                         dopuszczenia.AllowSorting = true;
@@ -151,8 +153,11 @@ namespace BHPowiec
                 ctMenu.Controls.Add(BadaniaOkresowe);
                 ctMenu.Controls.Add(liEnd);
 
+                //dopuszczenia pracowników
+                dopuszczenia.DataBind();
                 ctTresc.Controls.Add(new LiteralControl("<h2>Odpowiedzi po badaniach</h2><div>"));
                 ctTresc.Controls.Add(dopuszczenia);
+                ctTresc.Controls.Add(datasource);
                 ctTresc.Controls.Add(new LiteralControl("</div>"));
             }
 

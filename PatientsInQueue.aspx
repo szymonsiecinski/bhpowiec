@@ -22,13 +22,14 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="TrescStrony" runat="server">
     <h2>Kolejka pacjentów</h2>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [KolejkaPacjentow]"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT KP.Id AS 'Numer badania', P.Imie, P.Nazwisko, B.Nazwa AS 'NazwaBadania', KP.TerminBadania, KP.Komentarz FROM [KolejkaPacjentow] AS KP JOIN Badania AS B ON B.Id = KP.IdBadania JOIN Pracownicy AS P ON P.Id = KP.IdPacjenta"></asp:SqlDataSource>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Numer badania" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
-            <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="IdPacjenta" HeaderText="IdPacjenta" SortExpression="IdPacjenta" />
-            <asp:BoundField DataField="IdBadania" HeaderText="IdBadania" SortExpression="IdBadania" />
+            <asp:BoundField DataField="Numer badania" HeaderText="Numer badania" InsertVisible="False" ReadOnly="True" SortExpression="Numer badania" />
+            <asp:BoundField DataField="Imie" HeaderText="Imie" SortExpression="Imie" />
+            <asp:BoundField DataField="Nazwisko" HeaderText="Nazwisko" SortExpression="Nazwisko" />
+            <asp:BoundField DataField="NazwaBadania" HeaderText="NazwaBadania" SortExpression="NazwaBadania" />
             <asp:BoundField DataField="TerminBadania" HeaderText="TerminBadania" SortExpression="TerminBadania" />
             <asp:BoundField DataField="Komentarz" HeaderText="Komentarz" SortExpression="Komentarz" />
         </Columns>

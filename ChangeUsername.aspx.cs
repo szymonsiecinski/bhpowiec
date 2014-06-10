@@ -52,7 +52,13 @@ namespace BHPowiec
             }
         }
 
-        protected void ChangeEmailBtn_Click(object sender, EventArgs e)
+        protected void ButtonLogout_Click(object sender, EventArgs e)
+        {
+            Session["UserSession"] = null;
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void ChangeUsernamelBtn_Click(object sender, EventArgs e)
         {
             try
             {

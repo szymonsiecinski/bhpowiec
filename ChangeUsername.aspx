@@ -1,13 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangeUsername.aspx.cs" Inherits="BHPowiec.ChangeUsername" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangeUsername.aspx.cs" Inherits="BHPowiec.ChangeUsername" MasterPageFile="~/BHPowiec.Master" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="Login" runat="server">
+    <p id="P1">
+        <asp:Label ID="LabelUsername" runat="server" Text="Jesteś zalogowany jako"></asp:Label>
+&nbsp;<asp:Button ID="ButtonLogout" runat="server" OnClick="ButtonLogout_Click" Text="Wyjdź" />
+        </p>
+</asp:Content>
+<asp:Content ID="tresc" ContentPlaceHolderID="TrescStrony" runat="server">
     <div>
     <table class="form">
         <tr>
@@ -26,10 +24,8 @@
             </tr>
         <tr>
             <td class="auto-style1"></td>
-            <td><asp:Button runat="server" ID="ChangeUsernameBtn" Text="Zmień nazwę użytkownika" OnClick="ChangeEmailBtn_Click"/></td>
+            <td><asp:Button runat="server" ID="ChangeUsernameBtn" Text="Zmień nazwę użytkownika" OnClick="ChangeUsernamelBtn_Click"/></td>
         </tr>
     </table>
     </div>
-    </form>
-</body>
-</html>
+    </asp:Content>
